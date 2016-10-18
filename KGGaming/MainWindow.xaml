@@ -5,8 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KGGaming"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="KG Gaming" Height="350.995" Width="525" ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <GridSplitter x:Name="gridSplitter" HorizontalAlignment="Left" Height="319" VerticalAlignment="Top" Width="5" Grid.RowSpan="2" Margin="255,3,0,-3" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            <GridSplitter.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF0CFF00" Offset="1"/>
+                </LinearGradientBrush>
+            </GridSplitter.Background>
+            <GridSplitter.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </GridSplitter.RenderTransform>
+        </GridSplitter>
+        <Border BorderBrush="Black" BorderThickness="2" Margin="0,0,0,258" Grid.ColumnSpan="2">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FF2EFF00" Offset="1"/>
+                    <GradientStop Color="#FEFFFFFF" Offset="0.02"/>
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FE000500" Offset="0.007"/>
+                    <GradientStop Color="#FE000500" Offset="0.007"/>
+                    <GradientStop Color="#FE000500" Offset="0.007"/>
+                    <GradientStop Color="#FE000500" Offset="0.007"/>
+                    <GradientStop Color="#FEFFFFFF"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Label x:Name="lblLogin" Content="Login" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0" Margin="95,10,92,0" VerticalAlignment="Top" Width="71"/>
+        <Label x:Name="lblSignUp" Content="Sign Up" FontSize="20" FontWeight="Bold"  Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Margin="86,10,83,0" VerticalAlignment="Top" Width="90"/>
+
+        <!-- Login Side -->
+        <!--<ToolBarPanel HorizontalAlignment="Left" Background="DarkGray" Height="59" VerticalAlignment="Top" Width="517" Grid.ColumnSpan="2"/>-->
+        <StackPanel>
+            <Label x:Name="lblLoginUser" Grid.Column="0" Content="Username:" HorizontalAlignment="Left" Margin="18,85,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtLoginUser" Grid.Column="0" Height="23" TextWrapping="Wrap" Margin="23,0,24,0"/>
+            <Label x:Name="lblLoginPassword" Grid.Column="0" Content="Password:" HorizontalAlignment="Left" Margin="18,0,0,0" VerticalAlignment="Top"/>
+            <PasswordBox x:Name="passBoxPassword" Grid.Column="0" Height="23" Margin="24,0,24,0"/>
+            <Button x:Name="btnLogin" Grid.Column="0" Height="30" Margin="24,15,24,0" Content="Login"/>
+        </StackPanel>
+        <!-- __________ -->
+        <StackPanel Grid.Column="1">
+            <Label x:Name="lblSignUpUser" Grid.Column="0" Content="Username:" HorizontalAlignment="Left" Margin="18,85,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtSignUpUser" Grid.Column="0" Height="23" TextWrapping="Wrap" Margin="24,0,24,0"/>
+            <Label x:Name="lblSignUpPassword" Grid.Column="0" Content="Password:" HorizontalAlignment="Left" Margin="18,0,0,0" VerticalAlignment="Top"/>
+            <PasswordBox x:Name="pbSignUpPassword" Grid.Column="0" Height="23" Margin="24,0,24,0"/>
+            <Label x:Name="lblSignUpConfirmPassword" Grid.Column="0" Content="Confirm Password:" HorizontalAlignment="Left" Margin="24,0,24,0" VerticalAlignment="Top"/>
+            <PasswordBox x:Name="pbSignUpPasswordConfirm" Grid.Column="0" Height="23" Margin="24,0,24,0"/>
+            <Button x:Name="btnSignUp" Grid.Column="0" Height="30" Margin="24,15,24,0" Content="Sign Up"/>
+        </StackPanel>
     </Grid>
 </Window>

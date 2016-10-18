@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:KGGaming"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="headerBoarderStyle" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="#333333"/>
+        </Style>
     </Application.Resources>
 </Application>
