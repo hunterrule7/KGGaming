@@ -22,13 +22,14 @@ namespace KGGaming
     /// </summary>
     public partial class MainWindow : Window
     {
-        string pulledInfo;
+        private bool foundMatch;
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void btnSignUp_Click(object sender, RoutedEventArgs e)
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             DataContext db = new DataContext(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Hunter Gulley\Source\Repos\KGGaming\KGGaming\LoginData.mdf; Integrated Security = True; Connect Timeout = 30");
             Table<Info> Information = db.GetTable<Info>();
@@ -37,14 +38,35 @@ namespace KGGaming
                 IQueryable<Info> detailQuery = from Info in Information select Info;
                 foreach (Info item in detailQuery)
                 {
-                    pulledInfo += String.Format("ID={0}, Username={1}, Password={2}\n", item.Id, item.Username, item.Password);
-                    MessageBox.Show(pulledInfo);
+                    if (txtLoginUser.Text == item.Username && passBoxPassword.Password == item.Password)
+                    {
+                        foundMatch = true;
+                    }
+                    else
+                    {
+                        foundMatch = false;
+                    }
+                }
+                if (foundMatch == true)
+                {
+                    MessageBox.Show("Logged In!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                    NavigationService navService = NavigationService.GetNavigationService(this);
+                    navService.Navigate("MainMenu.xaml", UriKind.RelativeOrAbsolute);
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Login Credintials, Please check to see if the username and password are both correct.", "Error", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnSignUp_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
