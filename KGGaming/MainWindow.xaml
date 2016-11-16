@@ -62,7 +62,7 @@
             <PasswordBox x:Name="pbSignUpPassword" Grid.Column="0" Height="23" Margin="24,0,24,0"/>
             <Label x:Name="lblSignUpConfirmPassword" Grid.Column="0" Content="Confirm Password:" HorizontalAlignment="Left" Margin="24,0,24,0" VerticalAlignment="Top"/>
             <PasswordBox x:Name="pbSignUpPasswordConfirm" Grid.Column="0" Height="23" Margin="24,0,24,0"/>
-            <Button x:Name="btnSignUp" Grid.Column="0" Height="30" Margin="24,15,24,0" Content="Sign Up"/>
+            <Button x:Name="btnSignUp" Grid.Column="0" Height="30" Margin="24,15,24,0" Content="Sign Up" Click="btnSignUp_Click"/>
         </StackPanel>
     </Grid>
 </Window>
