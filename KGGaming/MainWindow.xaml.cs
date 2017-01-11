@@ -23,6 +23,7 @@ namespace KGGaming
     public partial class MainWindow : Window
     {
         private bool foundMatch;
+        private string myEmpID;
 
         public MainWindow()
         {
@@ -32,11 +33,11 @@ namespace KGGaming
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             DataContext db = new DataContext(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Hunter Gulley\Source\Repos\KGGaming\KGGaming\LoginData.mdf; Integrated Security = True; Connect Timeout = 30");
-            Table<Info> Information = db.GetTable<Info>();
+            Table<LoginInfo> Information = db.GetTable<LoginInfo>();
             try
             {
-                IQueryable<Info> detailQuery = from Info in Information select Info;
-                foreach (Info item in detailQuery)
+                IQueryable<LoginInfo> detailQuery = from LoginInfo in Information select LoginInfo;
+                foreach (LoginInfo item in detailQuery)
                 {
                     if (txtLoginUser.Text == item.Username && passBoxPassword.Password == item.Password)
                     {
@@ -50,7 +51,7 @@ namespace KGGaming
                 if (foundMatch == true)
                 {
                     MessageBox.Show("Logged In!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                    MainMenu mainMenu = new MainMenu();
+                    MainMenu mainMenu = new MainMenu(txtLoginUser.Text);
                     mainMenu.Show();
                     this.Close();
                 }
@@ -63,11 +64,6 @@ namespace KGGaming
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void navToMainMenu()
-        {
-            
         }
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)

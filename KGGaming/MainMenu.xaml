@@ -20,8 +20,8 @@
         <TabControl x:Name="tabControl" Grid.Column="1" HorizontalAlignment="Left" Height="780" VerticalAlignment="Top" Width="867" Margin="0,1,0,0" Grid.Row="1" Grid.RowSpan="4">
             <TabItem Header="Products" Height="22" VerticalAlignment="Bottom">
                 <Grid Background="#FFE5E5E5">
-                    <Button x:Name="btnItemTest" Content="Test" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" Height="80" FontSize="36" Click="btnItemTest_Click"/>
-                    <Button x:Name="btnItemTest2" Content="Test 2" HorizontalAlignment="Left" Margin="145,10,0,0" VerticalAlignment="Top" Width="130" Height="80" FontSize="36" Click="btnItemTest2_Click"/>
+                    <Button x:Name="btnItemM4Mag" Content="M4 MidCap&#xD;&#xA;  Magazine" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="199" Height="138" FontSize="36" Click="btnItemTest_Click"/>
+                    <Button x:Name="btnItemLipo" Content="Lipo 11.1v&#xA;  Battery" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top" Width="199" Height="142" FontSize="36" Click="btnItemTest2_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Services">
@@ -48,5 +48,7 @@
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
         </ListView>
+        <Label x:Name="lblEmployee" Content="Employee:" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="104" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="lblEmpID" Content="N/A" HorizontalAlignment="Left" Margin="102,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="134" FontSize="18"/>
     </Grid>
 </Window>

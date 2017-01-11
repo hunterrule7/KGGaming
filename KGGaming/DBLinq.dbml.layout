@@ -2,10 +2,16 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DBLinq">
   <DataContextMoniker Name="/DBLinqDataContext" />
   <nestedChildShapes>
-    <classShape Id="d6da058a-c1a8-4767-adf9-004518946b82" absoluteBounds="4.625, 3.25, 2, 1.3862939453125">
-      <DataClassMoniker Name="/DBLinqDataContext/Info" />
+    <classShape Id="394a55b0-6cb9-40ca-82d9-16e2afb25aa4" absoluteBounds="4.625, 1.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DBLinqDataContext/LoginInfo" />
       <nestedChildShapes>
-        <elementListCompartment Id="303217d9-c330-4098-86bc-1a2f13e02b52" absoluteBounds="4.64, 3.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="a1f4dda6-4b26-45c2-9de9-317094a0d0c3" absoluteBounds="4.64, 2.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8cda7374-f7e4-4a02-a944-269f0b5b8b08" absoluteBounds="4.625, 3.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DBLinqDataContext/Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3386add0-f0fa-4e01-b908-36372fa1daac" absoluteBounds="4.64, 3.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
