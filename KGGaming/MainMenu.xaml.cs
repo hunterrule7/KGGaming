@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace KGGaming
@@ -18,12 +17,11 @@ namespace KGGaming
     /// <summary>
     /// Interaction logic for MainMenu.xaml
     /// </summary>
-    public partial class MainMenu : Page
+    public partial class MainMenu : Window
     {
         public MainMenu()
         {
             InitializeComponent();
-            myBrowser.Navigate("http://www.youtube.com/kryptongamingchannel");
         }
     }
 }

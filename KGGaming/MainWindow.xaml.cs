@@ -50,8 +50,9 @@ namespace KGGaming
                 if (foundMatch == true)
                 {
                     MessageBox.Show("Logged In!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                    NavigationService navService = NavigationService.GetNavigationService(this);
-                    navService.Navigate("MainMenu.xaml", UriKind.RelativeOrAbsolute);
+                    MainMenu mainMenu = new MainMenu();
+                    mainMenu.Show();
+                    this.Close();
                 }
                 else
                 {
@@ -62,6 +63,11 @@ namespace KGGaming
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void navToMainMenu()
+        {
+            
         }
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
