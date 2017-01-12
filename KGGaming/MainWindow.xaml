@@ -10,18 +10,20 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Border BorderBrush="Black" BorderThickness="2" Margin="0,0,0,215" Grid.ColumnSpan="2">
+        <Border BorderBrush="Black" BorderThickness="0" Margin="0,0,0,215" Grid.ColumnSpan="2">
             <Border.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF2EFF00" Offset="1"/>
-                    <GradientStop Color="#FEFFFFFF" Offset="0.02"/>
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FE000500" Offset="0.007"/>
-                    <GradientStop Color="#FE000500" Offset="0.007"/>
-                    <GradientStop Color="#FE000500" Offset="0.007"/>
-                    <GradientStop Color="#FE000500" Offset="0.007"/>
+                    <GradientStop Color="White" Offset="1"/>
                     <GradientStop Color="#FEFFFFFF"/>
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#FE000500"/>
+                    <GradientStop Color="#FF4DA5F3"/>
+                    <GradientStop Color="#FF4DA5F3"/>
+                    <GradientStop Color="#FF4DA5F3"/>
+                    <GradientStop Color="#FF4DA5F3"/>
+                    <GradientStop Color="#FF4DA5F3"/>
+                    <GradientStop Color="#FF4DA5F3"/>
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
@@ -37,7 +39,6 @@
             <PasswordBox x:Name="passBoxPassword" Height="23" Margin="110,0,0,0" HorizontalAlignment="Left" Width="303" VerticalAlignment="Top"/>
             <Button x:Name="btnLogin" Grid.Column="0" Height="30" Margin="110,15,106,0" Content="Login" Click="btnLogin_Click"/>
         </StackPanel>
-        <Image x:Name="imgExit" Source="Images/Exit.ico" HorizontalAlignment="Left" Height="30" Margin="465,68,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="-0.31,0.8" MouseUp="imgExit_MouseUp"/>
         <!-- __________ -->
     </Grid>
 </Window>

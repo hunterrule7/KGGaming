@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KGGaming"
         mc:Ignorable="d"
-        Title="Main Menu" Height="870.492" Width="1542.082" Background="White" Foreground="Black" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Main Menu" Height="870.492" Width="1542.082" Background="White" Foreground="Black" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -20,8 +20,8 @@
         <TabControl x:Name="tabControl" Grid.Column="1" HorizontalAlignment="Left" Height="780" VerticalAlignment="Top" Width="867" Margin="0,1,0,0" Grid.Row="1" Grid.RowSpan="4">
             <TabItem Header="Products" Height="22" VerticalAlignment="Bottom">
                 <Grid Background="#FFE5E5E5">
-                    <Button x:Name="btnItemM4Mag" Content="M4 MidCap&#xD;&#xA;  Magazine" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="199" Height="138" FontSize="36" Click="btnItemTest_Click"/>
-                    <Button x:Name="btnItemLipo" Content="Lipo 11.1v&#xA;  Battery" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top" Width="199" Height="142" FontSize="36" Click="btnItemTest2_Click"/>
+                    <Button x:Name="btnItemM4Mag" Content="M4 MidCap&#xD;&#xA;  Magazine" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="146" Height="86" FontSize="24" Click="btnItemTest_Click"/>
+                    <Button x:Name="btnItemLipo" Content="Lipo 11.1v&#xA;  Battery" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="176,10,0,0" VerticalAlignment="Top" Width="146" Height="86" FontSize="24" Click="btnItemTest2_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Services">
@@ -30,6 +30,7 @@
                         <ColumnDefinition Width="8*"/>
                         <ColumnDefinition Width="279*"/>
                     </Grid.ColumnDefinitions>
+                    <Button x:Name="btnGunRepair" Content="Gun Repair" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="150" Grid.ColumnSpan="2" Height="71" FontSize="24" Click="btnGunRepair_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>
@@ -50,6 +51,9 @@
         </ListView>
         <Label x:Name="lblEmployee" Content="Employee:" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="104" FontSize="18" FontWeight="Bold"/>
         <Label x:Name="lblEmpID" Content="N/A" HorizontalAlignment="Left" Margin="102,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="134" FontSize="18"/>
-        <Image x:Name="imgLogout" Source="Images/Logout.png" HorizontalAlignment="Left" Height="47" Margin="620,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="38" MouseUp="imgLogout_MouseUp"/>
+        <Label x:Name="lblStoreName" Content="Kryton Airsoft" HorizontalAlignment="Left" Margin="200,50,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <Label x:Name="lblTotal" Content="Total:" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <Label x:Name="lblTotalCost" Content="$0.00" HorizontalAlignment="Left" Margin="118,10,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="36"/>
+        <Image x:Name="imgPay" Source="Images/PayNow.png" HorizontalAlignment="Left" Height="63" Margin="473,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="185" MouseUp="imgPay_MouseUp"/>
     </Grid>
 </Window>
