@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="Settings" Height="426.746" Width="583.738" WindowStartupLocation="CenterScreen">
     <Grid>
-
+        <TextBox x:Name="txtNewEmpID" HorizontalAlignment="Left" Height="23" Margin="10,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <TextBox x:Name="txtNewEmpPass" HorizontalAlignment="Left" Height="23" Margin="202,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <TextBox x:Name="txtNewEmpPassConfirm" HorizontalAlignment="Left" Height="23" Margin="396,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <Label x:Name="lblNewEmpID" Content="Employee ID:" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblAddEmp" Content="Add New Employee" HorizontalAlignment="Left" Margin="202,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.816,0.462" FontSize="16" FontWeight="Bold" Width="170"/>
+        <Label x:Name="lblNewEmpPass" Content="Password:" HorizontalAlignment="Left" Margin="202,26,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblNewEmpPassConfirm" Content="Confirm Password:" HorizontalAlignment="Left" Margin="396,26,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAddNewEmp" Content="Add To Database" HorizontalAlignment="Left" Margin="202,94,0,0" VerticalAlignment="Top" Width="170" Height="25" Click="btnAddNewEmp_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="14" Margin="0,140,0,0" VerticalAlignment="Top" Width="576">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0097FF" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
     </Grid>
 </Window>

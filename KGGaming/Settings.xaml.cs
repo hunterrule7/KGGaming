@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.Linq;
 
 namespace KGGaming
 {
@@ -22,6 +23,29 @@ namespace KGGaming
         public Settings()
         {
             InitializeComponent();
+        }
+
+        private void btnAddNewEmp_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                DataContext db = new DataContext(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Hunter Gulley\Source\Repos\KGGaming\KGGaming\LoginData.mdf; Integrated Security = True; Connect Timeout = 30");
+                LoginInfo loginInfo = new LoginInfo();
+                loginInfo.Username = txtNewEmpID.Text;
+                if (txtNewEmpPass.Text == txtNewEmpPassConfirm.Text)
+                {
+                    loginInfo.Password = txtNewEmpPassConfirm.Text;
+                }
+
+                //This still needs code to be operational.
+
+                MessageBox.Show("Success! You have added " + txtNewEmpID.Text + " to the database!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error has occured while trying to add the employee to the database.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

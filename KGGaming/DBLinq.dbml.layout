@@ -14,5 +14,11 @@
         <elementListCompartment Id="3386add0-f0fa-4e01-b908-36372fa1daac" absoluteBounds="4.64, 3.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="b74bc2b4-b4f4-4807-a8f6-4f92477222a3" absoluteBounds="2.25, 1.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DBLinqDataContext/AdminLogin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c57ade5-03cf-4f35-a261-547d893b54da" absoluteBounds="2.265, 2.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>
