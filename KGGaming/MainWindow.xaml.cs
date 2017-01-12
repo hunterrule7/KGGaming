@@ -70,5 +70,10 @@ namespace KGGaming
         {
 
         }
+
+        private void imgExit_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

@@ -158,6 +158,8 @@
   <ItemGroup>
     <Resource Include="Images\RegisterHeader.jpg" />
     <Resource Include="Images\Settings.png" />
+    <Resource Include="Images\Logout.png" />
+    <Resource Include="Images\Exit.ico" />
     <Content Include="LoginData.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

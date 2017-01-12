@@ -70,5 +70,12 @@ namespace KGGaming
             cartList.SelectedIndex = cartList.Items.Count - 1;
             cartList.ScrollIntoView(cartList.SelectedItem);
         }
+
+        private void imgLogout_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            MainWindow mainLogin = new MainWindow();
+            mainLogin.Show();
+            this.Close();
+        }
     }
 }

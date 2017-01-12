@@ -50,5 +50,6 @@
         </ListView>
         <Label x:Name="lblEmployee" Content="Employee:" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="35" Width="104" FontSize="18" FontWeight="Bold"/>
         <Label x:Name="lblEmpID" Content="N/A" HorizontalAlignment="Left" Margin="102,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="134" FontSize="18"/>
+        <Image x:Name="imgLogout" Source="Images/Logout.png" HorizontalAlignment="Left" Height="47" Margin="620,11,0,0" Grid.Row="1" VerticalAlignment="Top" Width="38" MouseUp="imgLogout_MouseUp"/>
     </Grid>
 </Window>
