@@ -42,6 +42,7 @@ namespace KGGaming
                     if (txtLoginUser.Text == item.Username && passBoxPassword.Password == item.Password)
                     {
                         foundMatch = true;
+                        break;
                     }
                     else
                     {
