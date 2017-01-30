@@ -37,7 +37,7 @@
             <TextBox x:Name="txtLoginUser" Height="23" TextWrapping="Wrap" Margin="110,0,0,0" HorizontalAlignment="Left" Width="303"/>
             <Label x:Name="lblLoginPassword" Content="Password:" HorizontalAlignment="Left" Margin="105,0,0,0" VerticalAlignment="Top"/>
             <PasswordBox x:Name="passBoxPassword" Height="23" Margin="110,0,0,0" HorizontalAlignment="Left" Width="303" VerticalAlignment="Top"/>
-            <Button x:Name="btnLogin" Grid.Column="0" Height="30" Margin="110,15,106,0" Content="Login" Click="btnLogin_Click"/>
+            <Button x:Name="btnLogin" Grid.Column="0" Height="30" Margin="110,15,96,0" Content="Login" Click="btnLogin_Click"/>
         </StackPanel>
         <!-- __________ -->
     </Grid>

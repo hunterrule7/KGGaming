@@ -30,11 +30,17 @@ namespace KGGaming
             try
             {
                 DataContext db = new DataContext(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Hunter Gulley\Source\Repos\KGGaming\KGGaming\LoginData.mdf; Integrated Security = True; Connect Timeout = 30");
-                LoginInfo loginInfo = new LoginInfo();
-                loginInfo.Username = txtNewEmpID.Text;
-                if (txtNewEmpPass.Text == txtNewEmpPassConfirm.Text)
+                LoginInfo loginInfo;
+                if (txtNewEmpPass.Password == txtNewEmpPassConfirm.Password)
                 {
-                    loginInfo.Password = txtNewEmpPassConfirm.Text;
+                    loginInfo = new LoginInfo
+                    {
+                        Username = txtNewEmpID.Text,
+                        Password = txtNewEmpPassConfirm.Password,
+                        Id = 3
+                    };
+                    
+                    db.SubmitChanges();
                 }
 
                 //This still needs code to be operational.
